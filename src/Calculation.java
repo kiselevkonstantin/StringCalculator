@@ -64,16 +64,10 @@ public class Calculation {
         } else throw new Exception("Неверный арифметический знак");
 
    }
-
     private void removeQuotes(String[] elements) {
         for (int i = 0; i < elements.length; i++) {
             elements[i] = elements[i].replace("\"", "").replace(" ", "");
         }
 
-//        "hello" - "ll"
-//            int index = data[0].indexOf(data[1]); // index 2
-//            String result = data[0].substring(0, index); // "he"
-//            result = result  + data[0].substring(index+data[1].length()); // "he" +
-//            printInQuotes(result);
     }
 }
