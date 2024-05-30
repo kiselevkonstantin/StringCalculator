@@ -22,8 +22,10 @@ public class Calculation {
                 System.out.println(elements[0]);
             } else {
                 int point = elements[0].indexOf(elements[1]);
-                String line = elements[0].substring(0, point);
-                System.out.println("\"" + line + "\"");
+                String line = elements[0].substring(0 , point);
+                line  = line + elements[0].substring(point+elements[1].length());
+                System.out.println("\"" + line+ "\"");
+
             }
 
         } else if (str.contains(" * ")) {
@@ -67,5 +69,11 @@ public class Calculation {
         for (int i = 0; i < elements.length; i++) {
             elements[i] = elements[i].replace("\"", "").replace(" ", "");
         }
+
+//        "hello" - "ll"
+//            int index = data[0].indexOf(data[1]); // index 2
+//            String result = data[0].substring(0, index); // "he"
+//            result = result  + data[0].substring(index+data[1].length()); // "he" +
+//            printInQuotes(result);
     }
 }
