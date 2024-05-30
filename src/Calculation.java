@@ -30,6 +30,7 @@ public class Calculation {
             elements = str.split(" \\* ");
             if (!elements[0].contains("\""))
                 throw new Exception("Первым аргументом должна быть строка");
+            removeQuotes(elements); // исправление
             if (elements[0].length() > 10 || elements[1].length() > 10)
                 throw new Exception("Не больше 10 символов");
             if (elements[1].contains("\""))
