@@ -39,7 +39,6 @@ public class Calculation {
             int number = Integer.parseInt(elements[1]);
             if (number < 1 || number > 10)
                 throw new Exception("Только множители от 1 до 10");
-            removeQuotes(elements);
             for (int i = 0; i < number; i++) {
                 output = output.concat(elements[0]);
             }
